@@ -15,6 +15,7 @@ namespace MVC_PRACTICE.Controllers
         // GET: EmployeeController
         public ActionResult Index()
         {
+            ViewData["Heading"] = "DILPRO";
             List<Employee> employees = _employeeRepository.GetEmployees();
             return View(employees);
         }
