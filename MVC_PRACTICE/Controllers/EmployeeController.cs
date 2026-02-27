@@ -15,7 +15,7 @@ namespace MVC_PRACTICE.Controllers
         // GET: EmployeeController
         public ActionResult Index()
         {
-            ViewData["Heading"] = "DILPRO";
+            ViewBag.Color = "Red";
             List<Employee> employees = _employeeRepository.GetEmployees();
             return View(employees);
         }
