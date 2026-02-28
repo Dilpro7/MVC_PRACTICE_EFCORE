@@ -16,7 +16,7 @@ builder.Services.AddControllersWithViews();
 // IN SIMPLE WORDS DEPENDENCY INJECTION MEANS ASSIGNING AN INTERFACE TO ANOTHER 
 //builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
-builder.Services.AddScoped<IEmployeeRepository, SqlEmployeeRepository>();
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
 
 // Dependency Injection for EmployeeDBContext

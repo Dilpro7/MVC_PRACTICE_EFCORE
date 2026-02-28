@@ -13,6 +13,7 @@ namespace MVC_PRACTICE.Repository
             emp.Name = "Adil Mohammed";
             emp.Salary = 25000;
             emp.City = "Vuyyuru";
+            
 
             _employees.Add(emp);
             _employees.Add(new Employee() { Id = 2, Name = "Abid Mohammad", Salary = 20000, City = "Machilipatnam" });
@@ -34,6 +35,10 @@ namespace MVC_PRACTICE.Repository
         public Employee GetEmployeeById(int id)
         {
             var employee = _employees.First(e => e.Id == id);
+
+            //Example for Partial View!!
+            employee.Company = new CompanyDetail() { Id = 1, CompanyName = "Google", ContactNumber = "8125539049"};
+            
             return employee;
         }
 
